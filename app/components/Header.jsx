@@ -7,13 +7,16 @@ import {useRootLoaderData} from '~/root';
  */
 export function Header({header, isLoggedIn, cart}) {
   const {shop, menu} = header;
+  console.log(menu)
+  const newMenu = menu.items.filter((_, index) => index < 3 );
+  console.log(newMenu)
   return (
-    <header className="header">
+    <header className=" header">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
+        <strong>{"Kangaroo Jane"}</strong>{/*<strong>{shop.name}</strong>*/}
       </NavLink>
       <HeaderMenu
-        menu={menu}
+        menu={{ items: newMenu }}
         viewport="desktop"
         primaryDomainUrl={header.shop.primaryDomain.url}
       />

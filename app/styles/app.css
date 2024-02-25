@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 :root {
   --aside-width: 400px;
   --cart-aside-summary-height-with-discount: 300px;
@@ -74,6 +78,7 @@ aside p:last-child {
 aside li {
   margin-bottom: 0.125rem;
 }
+
 
 .overlay {
   background: rgba(0, 0, 0, 0.2);
